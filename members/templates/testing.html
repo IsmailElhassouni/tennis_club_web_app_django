@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<html>
+<body>
+
+<p>In views.py you can see what the fruits variable looks like.</p>
+{% if greeting == 1 %}
+  <h1>Hello</h1>
+{% elif greeting >= 2 %}
+  <h1>Welcome</h1>
+{% else %}
+    <h1>hola</h1>
+{% endif %} 
+
+{%for j in f%}
+<h1>{{j.firstname}} {{j.lastname}}</h1>
+{% endfor %}
+
+
+</body>
+</html>
