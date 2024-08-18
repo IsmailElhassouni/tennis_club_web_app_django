@@ -8,8 +8,8 @@ def members(request):
 
     temp =loader.get_template('all_members.html')
     return HttpResponse(temp.render({'allmembers':allmembers},request))
-def details(request, id):
-    me=m.objects.get(id=id)
+def details(request, slug):
+    me=m.objects.get(slug=slug)
     temp=loader.get_template('details.html')
     return HttpResponse(temp.render({'m':me},request))
 def main(request):
